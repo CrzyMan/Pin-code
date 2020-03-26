@@ -1,0 +1,90 @@
+<html>
+    <style>
+        body{
+            background: black;
+            display: grid;
+            height: 100%;
+            grid-template-rows: 1fr 1fr 1fr;
+        }
+        
+        .pinpad {
+            display: grid;
+            grid-template-rows: repeat(5, 1fr);
+            margin: auto auto;
+            width: 30%
+        }
+        
+        .row {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        
+        .row > * {
+            height: 80px;
+            font-size: 2em;
+        }
+        
+        .allRows{
+            grid-column: 1 / 4;
+        }
+        
+        #display{
+            text-align: right;
+        }
+        
+        #enterButton{
+            border-radius: 10px;
+            margin-top: 1em;
+        }
+        
+        .wrongAnswer{
+            position: relative;
+            animation: wrong-answer 0.3s;
+        }
+        
+        @keyframes wrong-answer {
+            0%, 100% {
+                left: 0px;
+            }
+            20% , 60% {
+                left: 15px;
+            }
+            40% , 80% {
+                left: -15px;
+            }
+        }
+    </style>
+    <body>
+        <div>&nbsp;</div>
+        <div class="pinpad">
+            <div class="row">
+                <input id="display" class="allRows" type="text" disabled=true />
+            </div>
+            <div class="row">
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+            </div>
+            <div class="row">
+                <button>4</button>
+                <button>5</button>
+                <button>6</button>
+            </div>
+            <div class="row">
+                <button>7</button>
+                <button>8</button>
+                <button>9</button>
+            </div>
+            <div class="row">
+                <div>&nbsp;</div>
+                <button>0</button>
+                <div>&nbsp;</div>
+            </div>
+            <div class="row">
+                <button id="enterButton" class="allRows">Enter</button>
+            </div>
+        </div>
+        <div>&nbsp;</div>
+        <script src="script.js"></script>
+    </body>
+</html>
