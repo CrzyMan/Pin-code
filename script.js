@@ -21,7 +21,7 @@ function updateDisplay(){
 }
 
 var currentAnswer = "";
-var encryptedAnswer = "5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5";
+var encryptedAnswer = "8ef6e5ea68e21ce2f45ff7fb7614b57421b5e7d6b21d793d70178945af061c3b";
 
 function answerIsCorrect(){
     return sha256(currentAnswer) === encryptedAnswer;
