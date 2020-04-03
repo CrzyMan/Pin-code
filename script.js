@@ -22,9 +22,10 @@ function updateDisplay(){
 
 /***** Start business logic *****/
 var currentAnswer = "";
+// Default answer
 var encryptedAnswer = "8ef6e5ea68e21ce2f45ff7fb7614b57421b5e7d6b21d793d70178945af061c3b";
 
-// If key is included
+// If key is given, update the encrypted answer
 if (!(window.location.search.indexOf("?key=")<0)){
 	const key = window.location.search.slice(5);
 	if (key.length == encryptedAnswer.length){
