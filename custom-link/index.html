@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <script src="../sha256.js"></script>
+    </head>
+    <body>
+        <h2>Enter new pin code</h2>
+        <input id="inp_pinCode" type="number" maxlength="5"/>
+        <div id="div_output"></div>
+        <script>
+        	var pincode = document.getElementById("inp_pinCode");
+        	var output = document.getElementById("div_output");
+
+        	pincode.addEventListener("change", handlePincodeChange);
+
+        	function handlePincodeChange(e){
+        		console.log(e);
+        	}
+        </script>
+    </body>
+</html>
