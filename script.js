@@ -23,15 +23,14 @@ function updateDisplay(){
 /***** Start business logic *****/
 var currentAnswer = "";
 var encryptedAnswer = "8ef6e5ea68e21ce2f45ff7fb7614b57421b5e7d6b21d793d70178945af061c3b";
-(function(){
-	// If key is included
-	if (window.location.search.indexOf("?key=")){
-		const key = window.location.search.slice(5);
-		if (key.length == encryptedAnswer.length){
-			encryptedAnswer = key;
-		}
+
+// If key is included
+if (!(window.location.search.indexOf("?key=")<0)){
+	const key = window.location.search.slice(5);
+	if (key.length == encryptedAnswer.length){
+		encryptedAnswer = key;
 	}
-})()
+}
 
 function answerIsCorrect(){
     return sha256(currentAnswer) === encryptedAnswer;
